@@ -1,7 +1,7 @@
   <?php
 #AUTO CLAIM VOC GOJEK no tf RP 1
 #Created By Alip Dzikri X Apri AMsyah
-#Reedit Arief
+#Reedit Akbar Agung
 #####################################
 $tanggal = date('l, d-m-Y');
 $secret = '83415d06-ec4e-11e6-a41b-6c40088ab51e';
@@ -195,6 +195,21 @@ if($type == 2){
 		} 		
 } #END TYPE DAFTAR
 else if($type == 1){
+	function httpget($url)
+{
+    $ch = curl_init();  
+ 
+    curl_setopt($ch,CURLOPT_URL,$url);
+    curl_setopt($ch,CURLOPT_RETURNTRANSFER,true);
+//  curl_setopt($ch,CURLOPT_HEADER, false); 
+ 
+    $output=curl_exec($ch);
+ 
+    curl_close($ch);
+    return $output;
+}
+	
+	
 		echo " ~ ANDA MEMILIH MASUK ~\n";
 		echo "[+] Masukkan Nomor HP : ";
 		$number = trim(fgets(STDIN));
@@ -230,9 +245,9 @@ else if($type == 1){
 	echo "\n BERHASIL MASUK \n";
 	echo "[-] Token : $token \n";
 	echo "[+] Process CHECK VOUCHER \n";
-		$checkvoc = curl('https://api.gojekapi.com/gopoints/v3/wallet/vouchers', $headers);
+		$checkvoc = httpget('https://api.gojekapi.com/gopoints/v3/wallet/vouchers', $headers);
 		$checkvocc = json_decode($checkvoc[0]);
-		echo implode(', ', $checkvoc);
+		echo $checkvoc;
 	if($checkvocc->success == true) {
 						echo $checkvoc->total_vouchers;
 						echo $checkvoc;
