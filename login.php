@@ -14,7 +14,7 @@ $headers[] = "X-Uniqueid: ac94e5d0e7f3f".rand(111,999);
 $headers[] = 'X-AppVersion: 3.35.1';
 $headers[] = 'X-AppId: com.gojek.app';
 $headers[] = "X-User-Locale: en_ID";
-$headers[] = 'X-Location: 3.6426183,98.5294049';
+$headers[] = 'X-Location: -6.224058,106.877913';
 $headers[] = "Connection: keep-alive";
 $headers[] = "X-Platform: Android";
 $headers[] = "Host: api.gojekapi.com";
@@ -256,8 +256,8 @@ else if($type == 1){
 					}
 					sleep(60);
 	
-    echo "[+] Process Redeem GOFOODSANTAI19 \n";
-				$data19 = '{"promo_code":"GOFOODSANTAI19"}';
+    echo "[+] Process Redeem COBAGOCAR14 \n";
+				$data19 = '{"promo_code":"COBAGOCAR14"}';
 				$claim19 = curl('https://api.gojekapi.com/go-promotions/v1/promotions/enrollments', $data19, $headers);
 				$claims19 = json_decode($claim19[0]);
 					if($claims19->success == TRUE) {
@@ -271,8 +271,8 @@ else if($type == 1){
 						echo "[-] Failed Claim GOFOODSANTAI19\n";
 					}
 	sleep(6);
-	echo "[+] Process Redeem GOFOODSANTAI11 \n";
-				$data11 = '{"promo_code":"GOFOODSANTAI11"}';
+	echo "[+] Process Redeem COBAGOCARPAY \n";
+				$data11 = '{"promo_code":"COBAGOCARPAY"}';
 				$claim11 = curl('https://api.gojekapi.com/go-promotions/v1/promotions/enrollments', $data11, $headers);
 				$claims11 = json_decode($claim11[0]);
 					if($claims11->success == TRUE) {
@@ -286,8 +286,8 @@ else if($type == 1){
 						echo "[-] Failed Claim GOFOODSANTAI11\n";
 					}
 	sleep(6);
-	echo "[+] Process Redeem GOFOODSANTAI08 \n";
-				$data08 = '{"promo_code":"GOFOODSANTAI08"}';
+	echo "[+] Process Redeem COBAINGORIDE \n";
+				$data08 = '{"promo_code":"COBAINGORIDE"}';
 				$claim08 = curl('https://api.gojekapi.com/go-promotions/v1/promotions/enrollments', $data08, $headers);
 				$claims08 = json_decode($claim08[0]);
 					if($claims08->success == TRUE) {
@@ -301,15 +301,15 @@ else if($type == 1){
 						echo "[-] Failed Claim GOFOODSANTAI08\n";
 					}
 	sleep(6);
-	echo "[+] Process Redeem COBAINGOJEK \n";
-				$datacoba = '{"promo_code":"COBAINGOJEK"}';
+	echo "[+] Process Redeem COBAGORIDEPAY \n";
+				$datacoba = '{"promo_code":"COBAGORIDEPAY"}';
 				$claimcoba = curl('https://api.gojekapi.com/go-promotions/v1/promotions/enrollments', $datacoba, $headers);
 				$claimscoba = json_decode($claimcoba[0]);
 						echo $claimscoba->data->message."\n";
 						
 	sleep(6);
-	echo "[+] Process Redeem AYOCOBAGOJEK \n";
-				$dataayo = '{"promo_code":"AYOCOBAGOJEK"}';
+	echo "[+] Process Redeem COBAINGOCAR \n";
+				$dataayo = '{"promo_code":"COBAINGOCAR"}';
 				$claimayo = curl('https://api.gojekapi.com/go-promotions/v1/promotions/enrollments', $dataayo, $headers);
 				$claimsayo = json_decode($claimayo[0]);
 						echo $claimsayo->data->message."\n";
