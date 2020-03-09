@@ -252,12 +252,12 @@ else if($type == 1){
 						echo $checkvoc->total_vouchers;
 						echo $checkvoc;
 					}else{
-						echo "[-] Failed Claim GOFOODSANTAI19\n";
+						echo "[-] Failed Claim COBAGOFOOD090320A\n";
 					}
 					sleep(60);
 	
     echo "[+] Process Redeem GOFOODSANTAI19 \n";
-				$data19 = '{"promo_code":"GOFOODSANTAI19"}';
+				$data19 = '{"promo_code":"COBAGOFOOD090320A"}';
 				$claim19 = curl('https://api.gojekapi.com/go-promotions/v1/promotions/enrollments', $data19, $headers);
 				$claims19 = json_decode($claim19[0]);
 					if($claims19->success == TRUE) {
@@ -272,7 +272,7 @@ else if($type == 1){
 					}
 	sleep(6);
 	echo "[+] Process Redeem GOFOODSANTAI11 \n";
-				$data11 = '{"promo_code":"GOFOODSANTAI11"}';
+				$data11 = '{"promo_code":"GOFOOD022620A"}';
 				$claim11 = curl('https://api.gojekapi.com/go-promotions/v1/promotions/enrollments', $data11, $headers);
 				$claims11 = json_decode($claim11[0]);
 					if($claims11->success == TRUE) {
@@ -287,7 +287,7 @@ else if($type == 1){
 					}
 	sleep(6);
 	echo "[+] Process Redeem GOFOODSANTAI08 \n";
-				$data08 = '{"promo_code":"GOFOODSANTAI08"}';
+				$data08 = '{"promo_code":"GOFOOD022620B2"}';
 				$claim08 = curl('https://api.gojekapi.com/go-promotions/v1/promotions/enrollments', $data08, $headers);
 				$claims08 = json_decode($claim08[0]);
 					if($claims08->success == TRUE) {
@@ -302,14 +302,14 @@ else if($type == 1){
 					}
 	sleep(6);
 	echo "[+] Process Redeem COBAINGOJEK \n";
-				$datacoba = '{"promo_code":"COBAINGOJEK"}';
+				$datacoba = '{"promo_code":"COBAGOCARPAY"}';
 				$claimcoba = curl('https://api.gojekapi.com/go-promotions/v1/promotions/enrollments', $datacoba, $headers);
 				$claimscoba = json_decode($claimcoba[0]);
 						echo $claimscoba->data->message."\n";
 						
 	sleep(6);
 	echo "[+] Process Redeem AYOCOBAGOJEK \n";
-				$dataayo = '{"promo_code":"AYOCOBAGOJEK"}';
+				$dataayo = '{"promo_code":"COBAGORIDEPAY"}';
 				$claimayo = curl('https://api.gojekapi.com/go-promotions/v1/promotions/enrollments', $dataayo, $headers);
 				$claimsayo = json_decode($claimayo[0]);
 						echo $claimsayo->data->message."\n";
